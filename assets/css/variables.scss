@@ -1,0 +1,63 @@
+/* BREAKPOINT */
+$breakpoints: (
+  'mobile':  ( min-width:  576px ),
+  'pad':  ( min-width:  768px ),
+  1024: ( min-width:  1024px ),
+  'laptop': ( min-width:  1200px ),
+  1366:  ( min-width: 1366px )
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+}
+
+/* COLOR */
+$white: #fff;
+
+//bg color
+$child-bg-color: #ece9e5;
+
+/* CUSTOM VARIABLES */
+//color
+$primary-text-color: #2c3e50;
+
+$wvt-color: #FF6B00;
+$wvt-dark-color: #e46103;
+$wvt-hover-color: rgb(255, 137, 51);
+
+// base colors
+$background-primary: #D5D5D5;
+$background-secondary: #F4F4F4;
+$primary: #ACACAC;
+$secondary: #D5D5D5;
+$tertiary: #F1F1F1;
+$main: #F4A352;
+$Linkbtn_fb: #2E7080;
+$Linkbtn_line: #11AC31;
+$success-color: #67c23a;
+$error-color: #f56c6c;
+$gray-icon: #606266;
+
+// font colors
+$text-primary: #2F2F2F;
+$text-secondary: #070707;
+$text-tertiary: #D5D5D5;
+$text-main: #F4A352;
+$text-disable: #828282;
+
+// gradient colors
+$gradient-main: linear-gradient(to bottom, #FF6B00, #FF6B00 50%);
+$gradient-cover: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 53%, rgba(0, 0, 0, 0.5) 100%);
+
+//skeleton color
+$skeleton-color: 	#EDEDED;
+$skeleton-to-color: #E3E3E3;
+
+//el-color
+$el-border-color: #ebeef5;

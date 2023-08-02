@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@/assets/css/index.css";
+@import "@/assets/css/typography.scss";
+@import "@/assets/css/variables.scss";
+
+/* GENERAL STYLES
+-------------------------------------------------*/
+
+.general-bg {
+	background: $background-secondary;
+}
+
+// .container {
+// 	padding: 0 16px;
+// 	margin: 0 auto;
+// 	@include respond-to(mobile) {
+// 		max-width: 620px;
+// 	}
+// 	@include respond-to(pad) {
+// 		max-width: 100%;
+// 		padding: 0 16px;
+// 	}
+// 	@include respond-to(laptop) {
+// 		max-width: 1232px;
+// 		padding: 0 16px;
+// 	}
+// }
+
+.el-dialog--center .el-dialog__body {
+	text-align: center !important;
+	margin-top: 10px;
+	word-break: break-word;
+}

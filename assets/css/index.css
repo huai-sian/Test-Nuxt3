@@ -1,0 +1,117 @@
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans min-h-screen m-0 text-base text-text-primary md:overflow-x-hidden;
+  }
+  #app {
+    @apply min-h-screen;
+  }
+  *, *::before, *::after {
+    @apply box-border;
+  }
+  h1 {
+    @apply my-2 text-xl md:text-2xl tracking-wide font-medium;
+  }
+  h2 {
+    @apply my-2 text-lg md:text-lg tracking-wide font-medium;
+  }
+  h3 {
+    @apply my-2 text-base md:text-lg tracking-wide font-medium;
+  }
+  p {
+    @apply my-2 text-base tracking-wide;
+  }
+  a {
+    @apply no-underline;
+  }
+  img {
+    @apply w-full h-auto align-middle border-none;
+  }
+  input, textarea {
+   font-size: initial;
+  }
+}
+
+@layer components {
+  /* layout */
+  .fixed-w-container {
+    @apply w-full px-4 mx-auto xl:max-w-7xl
+  }
+
+  .notice-block {
+    @apply border border-solid border-yellow-500 bg-yellow-400 bg-opacity-10 rounded
+  }
+
+  .absolute-center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  /* button */
+  .contain-btn-small {
+    @apply max-h-8 bg-primary-normal border-primary-normal text-white hover:bg-primary-light hover:border-primary-light !important;
+  }
+  .contain-btn {
+    @apply max-h-10 bg-primary-normal border-primary-normal text-white hover:bg-primary-light hover:border-primary-light !important;
+  }
+  .contain-btn-large {
+    @apply bg-primary-normal border-primary-normal text-white hover:bg-primary-light hover:border-primary-light rounded-lg !important;
+  }
+  .text-btn {
+    @apply max-h-10 text-primary-normal hover:text-primary-light !important;
+  }
+  .outline-btn {
+    @apply max-h-10 text-primary-normal bg-transparent border-primary-normal hover:text-primary-light hover:bg-transparent hover:border-primary-light !important;
+  }
+  .gray-outline-btn {
+    @apply max-h-10 text-gray-500 border-gray-400 bg-transparent hover:border-gray-700 hover:bg-gray-100 hover:text-gray-700 !important;
+  }
+  .facebook-btn {
+    @apply max-h-10 bg-custom-fb border-custom-fb text-white hover:bg-custom-fb-light hover:border-custom-fb-light !important;
+  }
+
+  /* link */
+  .primary-link {
+    @apply text-primary-normal hover:text-primary-light !important;
+  }
+  .primary-link::after {
+    @apply border-primary-light !important;
+  }
+
+  /* skeleton */
+  .skeleton-img {
+    @apply rounded-lg w-full mb-1.5 !important;
+  }
+  .skeleton-title {
+    @apply block w-1/4 h-5 mb-1.5 !important;
+  }
+  .skeleton-text {
+    @apply h-4 mb-1.5 !important;
+  }
+
+  /* Element plus */
+  .el-radio.is-checked .el-radio__label{
+    @apply text-primary-normal !important;
+  }
+  
+  .el-radio.is-checked .el-radio__input.is-checked .el-radio__inner{
+    @apply border-primary-normal bg-primary-normal !important;
+  }
+
+  .el-dialog .el-dialog__headerbtn .el-dialog__close {
+    @apply hover:text-primary-normal !important;
+  }
+
+  .el-checkbox__input.is-checked + .el-checkbox__label {
+    @apply text-text-elGray !important;
+  }
+
+  .el-checkbox__input.is-checked .el-checkbox__inner {
+    @apply bg-primary-normal border-primary-normal !important;
+  }
+
+  .rounded-el-select .el-input__inner {
+    @apply rounded-full !important;
+  }
+}
