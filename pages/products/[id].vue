@@ -21,15 +21,6 @@
    router.push('/products')
   }
 
-  async function TestGet() {
-    try {
-      const result = await productsApi.getaProduct();
-    } catch(err) {
-      console.log(err);
-    }
-  }
-  TestGet();
-
   definePageMeta({
     layout: "products",
   })

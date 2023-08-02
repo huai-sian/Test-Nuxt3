@@ -22,7 +22,7 @@ const fetch = async (url, headers, localhandler)  => {
 
       if(error.value && error.value.statusCode) {
         httpErrorStatusHandle(error.value.statusCode);
-        return Promise.reject(error);
+        return Promise.reject(error.value);
       }
 
       // if (process.client) {
